@@ -1,10 +1,10 @@
 #!/bin/sh
 #Variables
-lightNum=1
-selection=0
-status=unknown
-apiKey=
-hueBridge=
+lightNum=1 #perform a GET to $hueBridge/api/$apiKey/lights to retrieve
+selection=0 #Default value for loop
+status=unknown #Default status
+apiKey= 
+hueBridge= #bridge IP address
 #Start loop
 while [[ selection -le 3 ]]
   do
