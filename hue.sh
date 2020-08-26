@@ -1,10 +1,10 @@
 #!/bin/sh
 #Variables
-lightNum=1 #perform a GET to $hueBridge/api/$apiKey/lights to retrieve
-selection=0 #Default value for loop
-status=unknown #Default status
-apiKey= 
-hueBridge= #bridge IP address
+lightNum=
+selection=0
+status=
+apiKey=
+hueBridge=
 #Start loop
 while [ $selection -le 5 ]
   do
@@ -40,14 +40,14 @@ while [ $selection -le 5 ]
     if [ $selection -eq 3 ]
       then
 	     curl -s -X PUT -d '{"on": true,"bri": 100,"hue": 8382,"sat":140}' http://$hueBridge/api/$apiKey/lights/$lightNum/state > /dev/null
-	     echo  "Beer Thirty!"
-	     status=BeerTime
+	     echo  "Soft White"
+	     status=SoftWhite
     fi
 #Turn light off
     if [ $selection -eq 4 ]
       then
 	      curl -s -X PUT -d '{"on": false}' http://$hueBridge/api/$apiKey/lights/$lightNum/state > /dev/null
-	      echo  "Beer Thirty!"
+	      echo  "Off"
 	      status=Off
     fi
 #Change light selection
