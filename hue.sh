@@ -16,7 +16,7 @@ while [ $selection -le 5 ]
   Select from the following:
   1. Busy
   2. Available
-  3. Beer Thirty
+  3. Soft White
   4. Off
   5. Change Light selection
   6. Exit"
